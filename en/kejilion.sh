@@ -5841,7 +5841,7 @@ add_connection() {
 				if [[ -z "$line" && "$password_or_key" == *"-----BEGIN"* ]]; then
 					break
 				fi
-				# If it is the first line or you have already started to enter the key content, continue adding
+				# If it is the first line or you have already started entering the key content, continue adding
 				if [[ -n "$line" || "$password_or_key" == *"-----BEGIN"* ]]; then
 					local password_or_key+="${line}"$'\n'
 				fi
@@ -6189,7 +6189,7 @@ add_task() {
 				if [[ -z "$line" && "$password_or_key" == *"-----BEGIN"* ]]; then
 					break
 				fi
-				# If it is the first line or you have already started to enter the key content, continue adding
+				# If it is the first line or you have already started entering the key content, continue adding
 				if [[ -n "$line" || "$password_or_key" == *"-----BEGIN"* ]]; then
 					password_or_key+="${line}"$'\n'
 				fi
@@ -6951,7 +6951,7 @@ docker_ssh_migration() {
 				local VOL_ARGS=""
 				for path in $VOL_PATHS; do VOL_ARGS+="-v $path:$path "; done
 
-				# mirror
+				# Mirror
 				local IMAGE
 				IMAGE=$(jq -r '.[0].Config.Image' "$inspect_file")
 
@@ -8815,7 +8815,7 @@ while true; do
 
 	  echo -e "${gl_kjlan}1.   ${color1}Pagoda panel official version${gl_kjlan}2.   ${color2}aaPanel Pagoda International Version"
 	  echo -e "${gl_kjlan}3.   ${color3}1Panel new generation management panel${gl_kjlan}4.   ${color4}NginxProxyManager visualization panel"
-	  echo -e "${gl_kjlan}5.   ${color5}OpenList multi-store file list program${gl_kjlan}6.   ${color6}Ubuntu Remote Desktop Web Edition"
+	  echo -e "${gl_kjlan}5.   ${color5}OpenList multi-store file list program${gl_kjlan}6.   ${color6}Ubuntu Remote Desktop Web Version"
 	  echo -e "${gl_kjlan}7.   ${color7}Nezha Probe VPS Monitoring Panel${gl_kjlan}8.   ${color8}QB offline BT magnetic download panel"
 	  echo -e "${gl_kjlan}9.   ${color9}Poste.io mail server program${gl_kjlan}10.  ${color10}RocketChat multi-person online chat system"
 	  echo -e "${gl_kjlan}------------------------"
@@ -12247,7 +12247,7 @@ linux_work() {
 	  echo -e "${gl_kjlan}2.   ${gl_bai}Work Area 2"
 	  echo -e "${gl_kjlan}3.   ${gl_bai}Work Area 3"
 	  echo -e "${gl_kjlan}4.   ${gl_bai}Work Area 4"
-	  echo -e "${gl_kjlan}5.   ${gl_bai}Work Area 5"
+	  echo -e "${gl_kjlan}5.   ${gl_bai}Workspace No. 5"
 	  echo -e "${gl_kjlan}6.   ${gl_bai}Work Area 6"
 	  echo -e "${gl_kjlan}7.   ${gl_bai}Work Area 7"
 	  echo -e "${gl_kjlan}8.   ${gl_bai}Work Area 8"
@@ -12685,8 +12685,8 @@ EOF
 						;;
 					2)
 						rm -f /etc/gai.conf
-						echo "Switched to IPv6 priority"
-						send_stats "Switched to IPv6 priority"
+						echo "Switched to IPv6 first"
+						send_stats "Switched to IPv6 first"
 						;;
 
 					3)
@@ -13888,7 +13888,7 @@ run_commands_on_servers() {
 		local username=${SERVER_ARRAY[i+3]}
 		local password=${SERVER_ARRAY[i+4]}
 		echo
-		echo -e "${gl_huang}Connect to$name ($hostname)...${gl_bai}"
+		echo -e "${gl_huang}connect to$name ($hostname)...${gl_bai}"
 		# sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$username@$hostname" -p "$port" "$1"
 		sshpass -p "$password" ssh -t -o StrictHostKeyChecking=no "$username@$hostname" -p "$port" "$1"
 	done
@@ -14224,7 +14224,7 @@ done
 
 
 k_info() {
-send_stats "k command reference use case"
+send_stats "k command reference examples"
 echo "-------------------"
 echo "Video introduction: https://www.bilibili.com/video/BV1ib421E7it?t=0.1"
 echo "The following is a reference use case for the k command:"
